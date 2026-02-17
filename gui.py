@@ -2,12 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 import time
 
-# ------------------ MAIN WINDOW ------------------
 root = tk.Tk()
 root.title("Complete Tkinter Demo")
 root.geometry("900x800")
 
-# ------------------ MENU BAR ------------------
 menu = tk.Menu(root)
 root.config(menu=menu)
 
@@ -22,10 +20,8 @@ helpmenu = tk.Menu(menu, tearoff=0)
 menu.add_cascade(label="Help", menu=helpmenu)
 helpmenu.add_command(label="About")
 
-# ------------------ LABEL ------------------
 tk.Label(root, text="Tkinter Full Demo", font=("Arial", 16)).pack(pady=10)
 
-# ------------------ ENTRY (GRID) ------------------
 entry_frame = tk.Frame(root)
 entry_frame.pack()
 
@@ -38,7 +34,6 @@ entry2 = tk.Entry(entry_frame)
 entry1.grid(row=0, column=1)
 entry2.grid(row=1, column=1)
 
-# ------------------ CHECKBUTTON ------------------
 check_frame = tk.Frame(root)
 check_frame.pack(pady=10)
 
@@ -48,7 +43,6 @@ var2 = tk.IntVar()
 tk.Checkbutton(check_frame, text="Male", variable=var1).pack(side="left")
 tk.Checkbutton(check_frame, text="Female", variable=var2).pack(side="left")
 
-# ------------------ RADIOBUTTON ------------------
 radio_frame = tk.Frame(root)
 radio_frame.pack()
 
@@ -56,7 +50,6 @@ v = tk.IntVar()
 tk.Radiobutton(radio_frame, text="Option A", variable=v, value=1).pack(side="left")
 tk.Radiobutton(radio_frame, text="Option B", variable=v, value=2).pack(side="left")
 
-# ------------------ LISTBOX + SCROLLBAR ------------------
 list_frame = tk.Frame(root)
 list_frame.pack(pady=10)
 
