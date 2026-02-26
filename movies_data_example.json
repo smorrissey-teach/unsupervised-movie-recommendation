@@ -1,0 +1,32 @@
+{
+  "id": 862,
+  "title": "Toy Story",
+  "original_title": "Toy Story",
+  "release_date": "1995-11-22",
+  "runtime": 81,
+  "status": "Released",
+  "tagline": "The adventure takes off when toys come to life!",
+  "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene...",
+  "genres": [
+    "Family",
+    "Comedy",
+    "Animation",
+    "Adventure"
+  ],
+  "language": "en",
+  "spoken_languages": ["English"],
+  "production_companies": ["Pixar"],
+  "production_countries": ["United States of America"],
+  "budget": 30000000,
+  "revenue": 401157969,
+  "vote_average": 7.97,
+  "vote_count": 19568,
+  "imdb_id": "tt0114709",
+  "homepage": "http://toystory.disney.com/toy-story",
+  "belongs_to_collection": "Toy Story Collection",
+  "adult": false,
+  "video": false,
+  "poster_path": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+  "backdrop_path": "/bSoOThXLrbgtphS2eZjwy2xYwVt.jpg"
+}
+
