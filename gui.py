@@ -1,7 +1,10 @@
+import tkinter
 import tkinter as tk
 from tkinter import ttk
 import time
-  
+from tkinter import PhotoImage
+from PIL import ImageTk, Image
+
 root = tk.Tk()
 root.title("Complete Tkinter Demo")
 root.geometry("900x800")
@@ -119,34 +122,37 @@ message.pack(pady=10)
 # text_widget.pack()
 # text_widget.insert(tk.END, "This is a Text widget\n")
 
+# image = Image.open('indiana_jones_raiders_of_the_lost_ark.jpeg')
+# image = ImageTk.PhotoImage(image)
+
 canvas = tk.Canvas(root, width=300, height=100)
 canvas.pack(pady=10)
 canvas.create_line(0, 50, 300, 50)
 
-def start_progress():
-    progress.start()
-    for i in range(101):
-        time.sleep(0.02)
-        progress["value"] = i
-        root.update_idletasks()
-    progress.stop()
-
-progress = ttk.Progressbar(root,
-                           orient="horizontal",
-                           length=300,
-                           mode="determinate")
-progress.pack(pady=10)
-
-tk.Button(root, text="Start Progress",
-          command=start_progress).pack()
-
-def open_new_window():
-    top = tk.Toplevel(root)
-    top.title("Secondary Window")
-    tk.Label(top, text="This is a Toplevel window").pack(pady=20)
-
-tk.Button(root, text="Open New Window",
-          command=open_new_window).pack(pady=10)
+# def start_progress():
+#     progress.start()
+#     for i in range(101):
+#         time.sleep(0.02)
+#         progress["value"] = i
+#         root.update_idletasks()
+#     progress.stop()
+#
+# progress = ttk.Progressbar(root,
+#                            orient="horizontal",
+#                            length=300,
+#                            mode="determinate")
+# progress.pack(pady=10)
+#
+# tk.Button(root, text="Start Progress",
+#           command=start_progress).pack()
+# 
+# def open_new_window():
+#     top = tk.Toplevel(root)
+#     top.title("Secondary Window")
+#     tk.Label(top, text="This is a Toplevel window").pack(pady=20)
+#
+# tk.Button(root, text="Open New Window",
+#           command=open_new_window).pack(pady=10)
 
 tk.Button(root, text="Close App",
           command=root.destroy).pack(pady=20)
