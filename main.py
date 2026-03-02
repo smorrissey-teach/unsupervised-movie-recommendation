@@ -74,7 +74,7 @@ movie_genre = pd.read_csv('movie_genre.csv')
 
 
 ratings_with_movies = rating.merge(movie, on="movieId")
-show(ratings_with_movies)
+ratings_with_movies.to_csv('movie_ratings.csv', index=False)
 #
 # ratings_with_genres = ratings_with_movies.merge(movie_genre, on="movieID")
 # ratings_full = ratings_with_genres.merge(genre, on="movieID")
