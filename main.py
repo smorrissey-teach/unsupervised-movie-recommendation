@@ -73,24 +73,36 @@ movie_genre = pd.read_csv('movie_genre.csv')
 #     print(popularity)
 
 
-ratings_with_movies = rating.merge(movie, on="movieId")
+#ratings_with_movies = rating.merge(movie, on="movieId")
 # ratings_with_movies.to_csv('movie_ratings.csv', index=False)
-
-ratings_with_genres = ratings_with_movies.merge(movie_genre, on="movieId")
-ratings_full = ratings_with_genres.merge(genre, on = "genreId")
-ratings_with_genres.to_csv('movie_ratings_with_genres.csv', index=False)
+#hello
+#ratings_with_genres = ratings_with_movies.merge(movie_genre, on="movieId")
+#ratings_full = ratings_with_genres.merge(genre, on = "genreId")
+#ratings_with_genres.to_csv('movie_ratings_with_genres.csv', index=False)
 
 # ratings_with_movies.to_csv('movie_ratings.csv', index=False)
 # ratings_full = ratings_with_genres.merge(genre, on="movieID")
+ratings_full = pd.read_csv('movie_ratings_with_genres.csv')
+user_stats = rating.groupby("userId").agg(
+    avg_rating=("rating", "mean"),
+    rating_count=("rating", "count")
 
-# user_stats = rating.groupby("userID").agg(
-#     avg_rating=("rating", "mean"),
-#     rating_count=("rating", "count")
-#
-# ).reset_index()
+).reset_index()
 
-# user_genre_avg = rating.full.groupby(userID,)
+print(user_stats.head())
+
+user_genre_avg = rating.full.groupby(["userId", "genre_name"])["rating"].mean().reset_index()
 # if genre.contain(genre):
 #     genre.add(genre)
+print(user_genre_avg.head())
 
-print(genre)
+
+# data = {
+#   "rating": [],
+#   "genres": []
+# }
+#
+# #load data into a DataFrame object:
+# df = pd.DataFrame(data)
+#
+# print(df)
