@@ -91,9 +91,11 @@ user_stats = rating.groupby("userId").agg(
 
 print(user_stats.head())
 
-user_genre_avg = rating.full.groupby(["userId", "genre_name"])["rating"].mean().reset_index()
+user_genre_avg = ratings_full.groupby(["userId", "genreId"])["rating"].mean().reset_index()
 # if genre.contain(genre):
 #     genre.add(genre)
+user_features = user_stats.merge(user_genre_avg, on = "userId", how = "outer")
+print(user_features)
 print(user_genre_avg.head())
 
 
